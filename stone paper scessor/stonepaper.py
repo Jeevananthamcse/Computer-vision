@@ -54,39 +54,52 @@ while True:
         if total == 0:
             print("Stone")
             import pyttsx3
-            engine = pyttsx3.init()
-            engine.say("stone")
-            engine.runAndWait()
-            cv2.rectangle(image, (20, 300), (230, 415),
-                          (0, 255, 0), cv2.FILLED)
-            cv2.putText(image, "Stone", (45, 375),
-                        cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 0, 255), 5)
+          #  engine = pyttsx3.init()
+          #  engine.say("stone")
+           # engine.runAndWait()
+        #    cv2.rectangle(image, (20, 30), (230, 415),
+               #           (0, 255, 0), cv2.FILLED)
+            cv2.putText(image, " You : Stone", (5, 300),
+                        cv2.FONT_HERSHEY_SIMPLEX, 1, ( 255,0, 0), 2)
+
+            cv2.putText(image, "Computer : Paper", (5,100),
+                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+
+
+
 
 
         elif total == 2:
             print("Scissors")
             import pyttsx3
-            engine = pyttsx3.init()
-            engine.say("Scissors")
-            engine.runAndWait()
-            cv2.rectangle(image, (20, 300), (425, 415),
-                          (0, 255, 0), cv2.FILLED)
-            cv2.putText(image, "Scissors", (45, 375),
-                        cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 0), 5)
+          #  engine = pyttsx3.init()
+          #  engine.say("Scissors")
+          #  engine.runAndWait()
+          #  cv2.rectangle(image, (20, 300), (425, 415),
+           #               (0, 255, 0), cv2.FILLED)
+            cv2.putText(image, "You : Scissors", (5, 300),
+                        cv2.FONT_HERSHEY_SIMPLEX, 1, (255,0, 0), 2)
+            cv2.putText(image, "Computer : Stone", (5, 100),
+                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+
+
 
 
 
         elif total == 5:
             print("paper")
             import pyttsx3
-            engine = pyttsx3.init()
-            engine.say("paper")
-            engine.runAndWait()
+          #  engine = pyttsx3.init()
+        #    engine.say("paper")
+          #  engine.runAndWait()
 
-            cv2.rectangle(image, (20, 300), (305, 415),
-                          (0, 255, 0), cv2.FILLED)
-            cv2.putText(image, "Paper", (45, 375),
-                        cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 0), 5)
+         #   cv2.rectangle(image, (20, 300), (305, 415),
+             #             (0, 255, 0), cv2.FILLED)
+            cv2.putText(image, "You : Paper", (5, 300),
+                        cv2.FONT_HERSHEY_SIMPLEX, 1, (255,0, 0), 2)
+            cv2.putText(image, "Computer : Scissors", (5, 100),
+                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+
 
     # Create window with freedom of dimensions
     cv2.namedWindow("stone paper Scissors", cv2.WINDOW_NORMAL)
